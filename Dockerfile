@@ -5,7 +5,7 @@ RUN wget -P /opt https://github.com/wso2/product-apim/releases/download/v1.9.1/w
     apt-get update && \
     apt-get install -y zip && \
     apt-get clean && \
-    unzip /opt/wso2am-1.8.0.zip -d /opt && \
+    unzip /opt/wso2am-1.9.1.zip -d /opt && \
     rm /opt/wso2am-1.9.1.zip
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
