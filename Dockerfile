@@ -1,4 +1,4 @@
-FROM java:8
+FROM java:7
 MAINTAINER Dario Alves Junior, darioajr@gmail.com
 
 RUN wget -P /opt https://github.com/wso2/product-apim/releases/download/v1.9.1/wso2am-1.9.1.zip && \
@@ -8,6 +8,6 @@ RUN wget -P /opt https://github.com/wso2/product-apim/releases/download/v1.9.1/w
     unzip /opt/wso2am-1.9.1.zip -d /opt && \
     rm /opt/wso2am-1.9.1.zip
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 EXPOSE 9443
 CMD ["/opt/wso2am-1.9.1/bin/wso2server.sh"]
